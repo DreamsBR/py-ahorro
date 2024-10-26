@@ -73,11 +73,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'expense_manager.wsgi.application'
 
-# Database configuration
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'data.db',  # Changed 'db.sqlite3' to 'data.db'
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'datapy',
+        'USER': 'postgres',
+        'PASSWORD': 'sql123',
+        'HOST': 'localhost',  # o la dirección de tu servidor
+        'PORT': '5432',       # Puerto predeterminado de PostgreSQL
     }
 }
 
